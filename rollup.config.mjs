@@ -32,8 +32,7 @@ export default {
     html({
       minify: true,
       injectServiceWorker: true,
-      serviceWorkerPath: 'dist/sw.js',
-      head: `<base href="https://Hristo313.github.io/health-web-components-app/">`,
+      serviceWorkerPath: 'dist/sw.js'
     }),
     /** Resolve bare module imports */
     nodeResolve(),
