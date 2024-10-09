@@ -33,7 +33,7 @@ export default {
       minify: true,
       injectServiceWorker: true,
       serviceWorkerPath: 'dist/sw.js',
-      head: `<base href="https://Hristo313.github.io/web-components-app/">`,
+      head: `<base href="https://Hristo313.github.io/health-web-components-app/">`,
     }),
     /** Resolve bare module imports */
     nodeResolve(),
