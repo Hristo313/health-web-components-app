@@ -46,7 +46,7 @@ jobs:
     - run: npm i
     - run: npm run build
     - name: Update base href in index.html
-      run: sed -i 's|<base href=".*">|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
+      run: sed -i 's|<base href="[^"]*"|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
     - name: github-pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
