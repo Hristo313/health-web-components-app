@@ -44,7 +44,8 @@ jobs:
     - run: echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
     - run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
     - run: npm i
-    - name: Build project with dynamic base-href
+    - run: npm run build
+    - name: Update base href in index.html
       run: sed -i 's|<base href=".*">|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
     - name: github-pages
       uses: peaceiris/actions-gh-pages@v3
