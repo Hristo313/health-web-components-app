@@ -49,11 +49,10 @@ jobs:
       run: sed -i 's|<base href="[^"]*"|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
     - name: Update Resource Paths
       run: |
-          find ./dist -maxdepth 1 -type f ! -name 'sw.js' ! -name 'sw.js.map' -name '*.js' -exec sed -i 's|/src/assets|/${{ github.event.repository.name }}/src/assets|g' {} +
-          find ./dist -maxdepth 1 -type f ! -name 'sw.js' ! -name 'sw.js.map' -name '*.js' -exec sed -i 's|url(/src/assets|url(/${{ github.event.repository.name }}/src/assets|g' {} +
-    #   run: |
-    #     REPO_NAME=${{ github.event.repository.name }}
-    #     find ./dist -maxdepth 1 -type f ! -name 'sw.js' ! -name 'sw.js.map' -name '*.js' -exec sed -i -e "s|/src/assets|/${{ github.event.repository.name }}/src/assets|g" -e "s|url('/src/assets|url('/${{ github.event.repository.name }}/src/assets|g" {} +
+        find ./dist -maxdepth 1 -type f ! -name 'sw.js' ! -name 'sw.js.map' -name '*.js' -exec sed -i -e "s|/src/assets|/${{ github.event.repository.name }}/src/assets|g" -e "s|url('/src/assets|url('/${{ github.event.repository.name }}/src/assets|g" {} +
+    - name: Update href Paths for ig-theme.css in JavaScript Files
+      run: |
+        find ./dist -maxdepth 1 -type f -name '*.js' -exec sed -i "s|href='../../ig-theme.css|href='../../${{ github.event.repository.name }}/ig-theme.css|g" {} +
     - name: github-pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
