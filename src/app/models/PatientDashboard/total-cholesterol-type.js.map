@@ -1,0 +1,1 @@
+{"version":3,"file":"total-cholesterol-type.js","sourceRoot":"","sources":["../../../../../src/app/models/PatientDashboard/total-cholesterol-type.ts"],"names":[],"mappings":"","sourcesContent":["export interface TotalCholesterolType {\n\tMonth: string;\n\tCholesterol: number;\n}\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"bpsystolic-diastolic-type.js","sourceRoot":"","sources":["../../../../../src/app/models/PatientDashboard/bpsystolic-diastolic-type.ts"],"names":[],"mappings":"","sourcesContent":["export interface BPSystolicDiastolicType {\n\tMonth: string;\n\tSystolic: number;\n\tDiastolic: number;\n}\n"]}

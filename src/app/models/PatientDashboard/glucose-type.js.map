@@ -1,0 +1,1 @@
+{"version":3,"file":"glucose-type.js","sourceRoot":"","sources":["../../../../../src/app/models/PatientDashboard/glucose-type.ts"],"names":[],"mappings":"","sourcesContent":["export interface GlucoseType {\n\tMonth: string;\n\tGlucose: number;\n}\n"]}

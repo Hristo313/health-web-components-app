@@ -1,0 +1,1 @@
+{"version":3,"file":"cholesterol-hdlldltype.js","sourceRoot":"","sources":["../../../../../src/app/models/PatientDashboard/cholesterol-hdlldltype.ts"],"names":[],"mappings":"","sourcesContent":["export interface CholesterolHDLLDLType {\n\tMonth: string;\n\tHDL: number;\n\tLDL: number;\n}\n"]}

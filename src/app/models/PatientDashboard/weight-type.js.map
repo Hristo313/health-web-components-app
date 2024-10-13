@@ -1,0 +1,1 @@
+{"version":3,"file":"weight-type.js","sourceRoot":"","sources":["../../../../../src/app/models/PatientDashboard/weight-type.ts"],"names":[],"mappings":"","sourcesContent":["export interface WeightType {\n\tMonth: string;\n\tWeight: number;\n}\n"]}

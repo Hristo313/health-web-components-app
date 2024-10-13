@@ -1,0 +1,1 @@
+{"version":3,"file":"heart-rate-type.js","sourceRoot":"","sources":["../../../../../src/app/models/PatientDashboard/heart-rate-type.ts"],"names":[],"mappings":"","sourcesContent":["export interface HeartRateType {\n\tMonth: string;\n\tHeartRate: number;\n}\n"]}
