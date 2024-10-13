@@ -49,8 +49,8 @@ jobs:
       run: sed -i 's|<base href="[^"]*"|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
     - name: Update Resource Paths
       run: |
-        sed -i 's|src/assets/|https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/src/assets/|g' ./dist/7e54001c.js
-        sed -i 's|url("/|url("https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/|g' ./dist/7e54001c.js
+        sed -i 's|src/assets/|/${{ github.event.repository.name }}/src/assets/|g' ./dist/7e54001c.js
+        sed -i 's|url("/|url("/${{ github.event.repository.name }}/|g' ./dist/7e54001c.js
     #   run: |
     #     REPO_NAME=${{ github.event.repository.name }}
     #     find ./dist -maxdepth 1 -type f ! -name 'sw.js' ! -name 'sw.js.map' -name '*.js' -exec sed -i -e "s|/src/assets|/${{ github.event.repository.name }}/src/assets|g" -e "s|url('/src/assets|url('/${{ github.event.repository.name }}/src/assets|g" {} +
