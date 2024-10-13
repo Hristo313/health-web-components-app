@@ -9,7 +9,7 @@ let App = class App extends LitElement {
     render() {
         return html `
       <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-      <link rel='stylesheet' href='../../ig-theme.css'>
+      <link rel='stylesheet' href='../../health-web-components-app/ig-theme.css'>
       <div class="row-layout main-navigation">
         <igc-navbar class="navbar">
           <div class="row-layout group">
