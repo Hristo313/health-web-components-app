@@ -23,7 +23,7 @@ let HealthIndicators = class HealthIndicators extends LitElement {
     }
     render() {
         return html `
-      <link rel='stylesheet' href='../../health-web-components-app/ig-theme.css'>
+      <link rel='stylesheet' href='../../ig-theme.css'>
       <div class="row-layout group">
         <div class="column-layout group_1">
           <p class="typography__subtitle-2 text">

@@ -4,7 +4,7 @@ import { customElement } from 'lit/decorators.js';
 let Emergency = class Emergency extends LitElement {
     render() {
         return html `
-      <link rel='stylesheet' href='../../health-web-components-app/ig-theme.css'>
+      <link rel='stylesheet' href='../../ig-theme.css'>
       <div class="column-layout demo-content">
         <img src="/src/assets/start-building.svg" class="image" />
         <h5 class="h5">

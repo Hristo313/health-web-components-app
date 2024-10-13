@@ -8,7 +8,7 @@ let Home = class Home extends LitElement {
     render() {
         return html `
       <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-      <link rel='stylesheet' href='../../health-web-components-app/ig-theme.css'>
+      <link rel='stylesheet' href='../../ig-theme.css'>
       <div class="column-layout group">
         <div class="row-layout group_1">
           <div @click="${() => Router.go(`/health-indicators`)}" class="column-layout group_2">
