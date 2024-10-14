@@ -45,8 +45,8 @@ jobs:
     - run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
     - run: npm i
     - run: npm run build
-    # - name: Update base href in index.html
-    #   run: sed -i 's|<base href="[^"]*"|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
+    - name: Update base href in index.html
+      run: sed -i 's|<base href="[^"]*"|<base href="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/">|' ./dist/index.html
     # - name: Update Resource Paths
     #   run: find ./dist -maxdepth 1 -type f ! -name 'sw.js' ! -name 'sw.js.map' -name '*.js' -exec sed -i -e "s|/src/assets|/${{ github.event.repository.name }}/src/assets|g" -e "s|url('/src/assets|url('/${{ github.event.repository.name }}/src/assets|g" {} +
     # - name: Update href Paths for ig-theme.css
