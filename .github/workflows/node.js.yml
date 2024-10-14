@@ -50,7 +50,7 @@ jobs:
     - name: Update Resource Paths
       run: find ./dist -maxdepth 1 -type f ! -name 'sw*.js' ! -name 'workbox*.js' -name '*.js' -exec sed -i -e "s|/src/assets|/${{ github.event.repository.name }}/src/assets|g" -e "s|url('/src/assets|url('/${{ github.event.repository.name }}/src/assets|g" {} +
     - name: Copy ig-theme.css to dist
-      run: cp ./src/assets/ig-theme.css ./dist/
+      run: cp ./ig-theme.css ./dist/
     # - name: Update href Paths for ig-theme.css
     #   run: sed -i "s|href='../../ig-theme.css|href='../../${{ github.event.repository.name }}/ig-theme.css|g" ./dist/7e54001c.js
       # run: find ./dist -maxdepth 1 -type f -name '*.js' -exec sed -i "s|href='../../ig-theme.css|href='../../${{ github.event.repository.name }}/ig-theme.css|g" {} +
